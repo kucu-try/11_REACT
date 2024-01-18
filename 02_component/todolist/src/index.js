@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import AppSplit1 from './AppSplit1';
+import AppSplit from './AppSplit';
+import IntroducePage from './Introduce/IntroducePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppSplit1 />
+    <IntroducePage />
    
   </React.StrictMode>
 );

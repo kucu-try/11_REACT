@@ -1,99 +1,105 @@
-import React from "react";
 import { useState } from "react";
 
-function App() {
-  const [list, setList] = React.useState([
-     
-  ]);
+//list를 출력하기 위한 컴포넌트
+const Item = ({todo,setTodoList,todoList,fontColor})=>{
+    // check 되었을 경우 취소선 처리
+    const [check,setCheck] = useState(false);
 
-
-  const [inputText, setInputText] = useState("");
-  const [nextId, setNextId] = useState(1);
-
-  const onChangeHandler = e => setInputText(e.target.value);
-
-  const onClickHandler = () =>{
-    const changeNames = list.concat({
-      id:nextId,
-      name: inputText
-    });
-
-    setNextId(nextId +1);
-    setList(changeNames);
-    setInputText("");
-  }
- 
-
-  
-
-
-  
-  const onRemove = id => {
-    const changeNames = list.filter(list => list.id !== id);
-    setList(changeNames);
-  }
-  const nameList1 = list.map(
-    list => {
-      return (
+    const style={
+        textDecoration : check? 'line-through' : "none",
         
-        <button key={list.id} onClick={() => onRemove(list.id)} >
-          삭제
-        </button>
-      );
+        color : fontColor? 'red' : 'black'
     }
-  );
 
-
-  const onColor= id =>{
-    const abcMart = document.getElementById(id);
-    abcMart.style.textDecoration = 'line-through';
-    abcMart.style.textDecorationColor = 'red';
-  }
-  const nameList2 = list.map(
-    list => {
-      return (
-        <button key={list.id} onClick={() => onColor(list.id)} >
-          색깔 변경
-        </button>
-      );
+ 
+    const changeBox = (e)=>{
+        setCheck(!check);
     }
-  );
 
+    const removeTodo = () =>{
+        const result = todoList.filter(item => item !== todo);
+        setTodoList(result);
+    }
 
-  return(
-    <>
-        <h1  style={{width:'100%', textAlign:'center'}}>to do list</h1>
-        <div style={{flexDirection:'column',padding:'1%',backgroundColor: 'green',width: '70%', height:'50%',position:'absolute' , overflowY:'auto',left:'15%', border : '1px solid black'}}>
-            <div style={{border : '1px solid black',width:'80%', height: '10%',textAlign:'center', fontSize:'30px', marginBottom:'20px'}} >
-            <NameList></NameList>
-            </div>
-            {nameList1}
-            {nameList2}
-        </div>
-        <div style={{width:'70%', height:'20%',gap:'10%',position:'absolute', bottom:'10%', left:'15%'}}>
-            <input style={{width:'50%', height:'20%', marginRight:'10%'}} type={inputText} onChange={onChangeHandler}/>
-            <button style={{width:'30%', height:'20%'}} onClick={onClickHandler}>추가</button>
-        </div>
-    </>
-  )
-
-  function NameList(){
-     
-    const nameList = list.map(
-        list => {
-        return (
-            
-            <div key={list.id} id={list.id} >
-            {list.name}
-            </div>
-        );
-        }
-    );
-
-    return nameList;
-  }
   
 
+    return(
+        <div>
+            <input type="checkBox" onChange={changeBox}/>
+            <label style={style}>{todo}</label>
+            <button onClick={removeTodo}>삭제</button>
+            
+        </div>
+    );
 }
+/* ------------------------------------------------------------------------------ */
+
+// todolist를 화면에 출력하기 위한 컨테이너
+const Container = ({todoList, setTodoList, fontColor})=>{
+
+    return (
+            todoList.map((current, index) =>{
+             return <Item fontColor = {fontColor} todo={current} key={index} setTodoList={setTodoList} todoList={todoList}/>
+            })
+    );
+}
+/* ------------------------------------------------------------------------------ */
+
+const InputContainer = ({todoList,setTodo})=>{
+    const [input, setInput] = useState("");
+
+    const addList = ()=>{
+        setTodo([...todoList, input]);
+    }
+
+    const changeInput = (e)=>{
+        setInput(e.target.value);
+    }
+
+    return(
+        <>
+            <input type="text" value={input} onChange={changeInput}/>
+            <button onClick={addList}>추가</button>
+        </>
+    );
+}
+/* ------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------ */
+
+//애플리케이션의 전체 화면 
+function App(){
+    const [todoList, setTodoList] = useState(["안녕", "안녕2"]);
+    const [black,setBlack] = useState(false);
+    const [fontColor,setFontColor] = useState(false);
+
+    const styl1={
+        backgroundColor : black? 'black' :'white'
+    }
+
+    const styl2={
+        color : fontColor? 'red' : 'black'
+    }
+
+    // const color = fontColor? 'red' : 'white';
+
+    const blackScreen = ()=>{
+        setBlack(!black);
+        setFontColor(!fontColor);
+    }
+
+    return (
+        // div 에 style={styl1, color} 주면 todo의 목록들도 색 적용 됨
+        <div style={styl1}>
+        <h1 style={styl2}>to do list</h1>
+        <button onClick={blackScreen}>블랙모드</button>  
+        <Container fontColor = {fontColor} todoList = {todoList} setTodoList={setTodoList} />
+        <InputContainer setTodo={setTodoList} todoList={todoList}/>
+        </div>
+    );
+}
+/* ------------------------------------------------------------------------------ */
+
 
 export default App;
