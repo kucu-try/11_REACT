@@ -7,8 +7,8 @@ const Item = ({todo,setTodoList,todoList,fontColor})=>{
 
     const style={
         textDecoration : check? 'line-through' : "none",
-        
-        color : fontColor? 'red' : 'black'
+         
+        color : fontColor? fontColor :'blue'
     }
 
  
@@ -73,13 +73,14 @@ function App(){
     const [todoList, setTodoList] = useState(["안녕", "안녕2"]);
     const [black,setBlack] = useState(false);
     const [fontColor,setFontColor] = useState(false);
+    const [inputFont, setInputFont] = useState("");
 
     const styl1={
         backgroundColor : black? 'black' :'white'
     }
 
     const styl2={
-        color : fontColor? 'red' : 'black'
+        color : fontColor? fontColor : 'blue'
     }
 
     // const color = fontColor? 'red' : 'white';
@@ -89,13 +90,26 @@ function App(){
         setFontColor(!fontColor);
     }
 
+    const InputBtn = (e)=>{
+        setFontColor(e.target.value);
+    }
+
+    const InputColor =(e)=>{
+        setInputFont(e.target.value);
+    }
+      
+
     return (
         // div 에 style={styl1, color} 주면 todo의 목록들도 색 적용 됨
         <div style={styl1}>
         <h1 style={styl2}>to do list</h1>
         <button onClick={blackScreen}>블랙모드</button>  
+    
         <Container fontColor = {fontColor} todoList = {todoList} setTodoList={setTodoList} />
         <InputContainer setTodo={setTodoList} todoList={todoList}/>
+        <input type="text" value={inputFont} onChange={InputColor}/>
+        <button onClick={InputBtn} value={inputFont}>색변경</button>
+        
         </div>
     );
 }
@@ -103,3 +117,17 @@ function App(){
 
 
 export default App;
+
+
+// const [ input, setInput] = useState("");
+// const colorChange = (e) =>{
+//     const a = e.target.value
+//     console.log("color :" + a);
+//     setFontColor(a);
+//    }
+//    const changeInput = (e) => {
+//     setInput(e.target.value);
+//     }
+
+//     <input type='text' value={input} onChange={changeInput}/>
+//     <button onClick={colorChange} value={input}>색변경</button>
