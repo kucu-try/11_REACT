@@ -20,7 +20,7 @@ function FooterFour(){
     }
     return(
         <div style={style4}>
-            <h2 style={style5}>GITGUB</h2>
+            <h2 style={style5}>GITHUB</h2>
             <a href="https://github.com/kucu-try">
                 <img style={style6} src="/깃허브3.png" alt="깃허브 로고"/>
             </a>

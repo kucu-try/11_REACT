@@ -7,7 +7,7 @@ import IntroducePage from './Introduce/IntroducePage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppSplit />
+    <IntroducePage />
    
   </React.StrictMode>
 );
