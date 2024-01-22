@@ -1,4 +1,4 @@
-function FooterTwo(){
+function FooterTwo({fontColor}){
     const style4 = {
         width : '25%',
         height : '100%',
@@ -6,14 +6,20 @@ function FooterTwo(){
     }
 
     const style5 = {
-        fontSize : '23px',
+        fontSize : '22px',
         borderBottom : '1px solid gray',
-        fontWeight : 'bold',
+        fontWeight : '900',
+        paddingBottom : '2.5%'
+        ,color : fontColor ? 'orange' : 'black' 
 
     }
 
     const style6 ={
         color : '#696969'
+        ,marginBlockStart : '1rem'
+        ,marginBlockEnd : '1rem'
+        ,marginLeft : '3%'
+        ,color : fontColor ? '#66ffff' : 'black' 
     }
     
 

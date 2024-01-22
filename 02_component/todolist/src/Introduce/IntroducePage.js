@@ -8,6 +8,7 @@ import FooterThree from "./FooterThree";
 import FooterFour from "./FooterFour";
 import "./index.css";
 
+
 function App(){ 
     const [black,setBlack] = useState(false);
     const [fontColor, setFontColor] = useState(false);
@@ -24,15 +25,13 @@ function App(){
 
     const style2 ={
         position: 'absolute',
-        width : '18%',
-        height : '20%',
-        top: '0%',
-        left: '2%',
-        borderRadius : '10%',
-        fontSize : '30px',
-        fontWeight : '900',
-        color : 'white',
-        backgroundColor: 'darkgrey'
+        width : '120px',
+        height : '28px',
+        top: '8%',
+        right: '15%',
+        fontSize : '0.9375rem',
+        fontWeight : '600',
+        backgroundColor : 'white'
     }
 
 
@@ -41,7 +40,7 @@ function App(){
         height : '40%',
         position : 'absolute',
         left : '0',
-        bottom : '0',
+        bottom : '1%',
         display : 'flex'
     }
   
@@ -57,12 +56,12 @@ function App(){
             <button style={style2} onClick={blackScreen}>DARK MODE</button>
             <Title fontColor={fontColor}/>
             <TitlePicture/>
-            <IntroduceWord/>
+            <IntroduceWord fontColor={fontColor}/>
             <footer style={style3}>
-                <FooterOne/>
-                <FooterTwo/>
-                <FooterThree/>
-                <FooterFour/>
+                <FooterOne fontColor={fontColor}/>
+                <FooterTwo fontColor={fontColor}/>
+                <FooterThree fontColor={fontColor}/>
+                <FooterFour fontColor={fontColor}/>
             </footer>
         </div>
         </>

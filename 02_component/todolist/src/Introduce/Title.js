@@ -2,14 +2,14 @@
 
 function Title({fontColor}){
     const style = {
-        width : '22%',
-        height : '45%',
+        width : '21%',
+        height : '43%',
         fontSize : 50,
         fontWeight :  '800',
         textAlign : 'center',
         position : 'absolute',
-        left : '0',
-        top : '10%',
+        left : '3%',
+        top: '8%',
         color : fontColor ? 'orange' : 'black'
     }
 

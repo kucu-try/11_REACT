@@ -1,4 +1,4 @@
-function FooterOne(){
+function FooterOne({fontColor}){
 
     const style4 = {
         width : '25%',
@@ -7,16 +7,20 @@ function FooterOne(){
     }
 
     const style5 = {
-        fontSize : '23px',
+        fontSize : '22px',
         borderBottom : '1px solid gray',
-        fontWeight : 'bold',
-
+        fontWeight : '900',
+        paddingBottom : '2.5%'
+        ,color : fontColor ? 'orange' : 'black' 
     }
 
     const style6 ={
         fontSize : '18px',
         fontWeight : '600',
         color : '#696969'
+        ,marginLeft : '3%'
+        ,color : fontColor ? '#66ffff' : 'black' 
+        
     }
     
     
@@ -25,7 +29,6 @@ function FooterOne(){
             <h2 style={style5}>PROFILE</h2>
             <h4 style={style6}>백 종 환</h4>
             <h4 style={style6}>1995 .02 .02</h4>
-            <h4 style={style6}>call : 010 - 5450 - 5642</h4>
             <h4 style={style6}>baekfive@gmail.com</h4>
         </div>
 

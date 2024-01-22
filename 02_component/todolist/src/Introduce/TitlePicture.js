@@ -5,7 +5,7 @@ function TitlePicture(){
         border : '1px solid black',
         position : 'absolute',
         left : '27%',
-        top : '10%'
+        top: '8%'
         
     }
 
@@ -18,7 +18,7 @@ function TitlePicture(){
 
     return(
         <div style={style1}>
-            <img style={style2} src="/프로필2.png"/>
+            <img style={style2} src="/프로필1.png"/>
         </div>
     )
 }
