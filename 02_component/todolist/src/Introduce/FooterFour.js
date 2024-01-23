@@ -20,7 +20,7 @@ function FooterFour({fontColor}){
     const style6 = {
         width : '90%',
         height : '50%'
-        ,borderRadius : fontColor ? '50%' : '0%'
+        ,borderRadius : fontColor ? '10%' : '0%'
       
         
     }
@@ -28,7 +28,7 @@ function FooterFour({fontColor}){
         <div style={style4}>
             <h2 style={style5}>GITHUB</h2>
             <a href="https://github.com/kucu-try">
-                <img style={style6} src= {fontColor ? "/보라돌이깃1.png" : "/깃허브3.png"}  alt="깃허브 로고"/>
+                <img style={style6} src= {fontColor ? "/바이올렛깃.png" : "/깃허브3.png"}  alt="깃허브 로고"/>
                
             </a>
         </div>

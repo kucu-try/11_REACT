@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 
 
 function Title({fontColor}){
@@ -10,13 +11,14 @@ function Title({fontColor}){
         position : 'absolute',
         left : '3%',
         top: '8%',
-        color : fontColor ? 'orange' : 'black'
+        color : fontColor ? 'orange' : 'black',
+        textDecoration : 'none'
     }
 
 
     return(
         
-            <div style={style}>KUCU</div>
+        <div><Link to={"/main"} style={style}>KUCU</Link></div>
             
     );
 }

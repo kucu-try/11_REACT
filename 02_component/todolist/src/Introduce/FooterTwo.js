@@ -19,7 +19,8 @@ function FooterTwo({fontColor}){
         ,marginBlockStart : '1rem'
         ,marginBlockEnd : '1rem'
         ,marginLeft : '3%'
-        ,color : fontColor ? '#66ffff' : 'black' 
+        ,color : fontColor ? '#cc99ff' : 'black' 
+        ,fontWeight : fontColor ? '350' : '600'
     }
     
 

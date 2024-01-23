@@ -29,7 +29,7 @@ function FooterThree({fontColor}){
 
     const style6 ={
         width : '50px',
-        border : fontColor ? ' 1px solid #66ffff' : '1px solid black' ,
+        border : fontColor ? ' 1px solid #cc99ff' : '1px solid black' ,
         borderRadius: '50%',
         transitionProperty: 'width, height,borderRadius',
         transitionDuration: '0.8s, 1s, 1s'
@@ -38,7 +38,7 @@ function FooterThree({fontColor}){
 
     const grow = {
         width : '80px',
-        border : fontColor ? ' 1px solid #66ffff' : ' 1px solid black' ,
+        border : fontColor ? ' 1px solid #cc99ff' : ' 1px solid black' ,
         borderRadius: '50%',
         transitionProperty: 'width, height,borderRadius',
         transitionDuration: '0.5s, 1s, 1s'
@@ -55,28 +55,27 @@ function FooterThree({fontColor}){
                     onMouseOut={mouseOut}/>
                 </a>
                 <a style={{textDecoration: 'none' , color: 'black'}} href="">
-                    <h5 style={{fontWeight: '350', fontSize: '16px'  ,color : fontColor ? '#66ffff' : 'black' }}>선생님을 위한 맞춤형 교실 관리 사이트</h5>
+                    <h5 style={{fontWeight: '350', fontSize: '16px'  ,color : fontColor ? '#cc99ff' : 'black' }}>선생님을 위한 맞춤형 교실 관리 사이트</h5>
                 </a>
                
             </div>
 
-
-
+        
 
 
             <div style={{height: '20%',display: "flex", gap:'18%'}}>
                 
-                <a style={{border : fontColor ? ' 1px solid #66ffff' : ' 1px solid black' , width:'50px', height: '50px'}} href="">
+                <a style={{border : fontColor ? ' 1px solid #cc99ff' : ' 1px solid black' , width:'50px', height: '50px'}} href="">
                     <img src=""/>
                 </a>
-                <h5 style={{ color : fontColor ? '#66ffff' : 'black' }}>INTRODUCE PAGE</h5>
+                <h5 style={{ color : fontColor ? '#cc99ff' : 'black'  ,fontWeight : fontColor ? '350' : '600'}}>INTRODUCE PAGE</h5>
             </div>
 
             <div style={{display: "flex" , gap:'20%'}}>
-            <a style={{border : fontColor ? ' 1px solid #66ffff' : ' 1px solid black' , width:'50px', height: '50px'}} href="">
+            <a style={{border : fontColor ? ' 1px solid #cc99ff' : ' 1px solid black' , width:'50px', height: '50px'}} href="">
                     <img src=""/>
                 </a>
-                <h5 style={{ color : fontColor ? '#66ffff' : 'black' }}>FINAL PROJECT</h5>
+                <h5 style={{ color : fontColor ? '#cc99ff' : 'black'  ,fontWeight : fontColor ? '350' : '600'}}>FINAL PROJECT</h5>
             </div>
             
         </div>

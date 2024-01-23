@@ -19,7 +19,8 @@ function FooterOne({fontColor}){
         fontWeight : '600',
         color : '#696969'
         ,marginLeft : '3%'
-        ,color : fontColor ? '#66ffff' : 'black' 
+        ,color : fontColor ? '#cc99ff' : 'black' 
+        ,fontWeight : fontColor ? '350' : '600'
         
     }
     
