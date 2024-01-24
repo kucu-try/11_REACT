@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 function Title({fontColor}){
     const style = {
         width : '21%',
-        height : '43%',
+        height : '7%',
         fontSize : 50,
         fontWeight :  '800',
         textAlign : 'center',

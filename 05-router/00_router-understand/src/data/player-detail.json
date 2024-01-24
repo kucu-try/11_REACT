@@ -1,0 +1,51 @@
+[
+    {
+        "playerCode" : 1,
+        "playerName" : "강백호",
+        "playerPosition" : "파워포워드",
+        "detail" : {
+            "description" : "만화같은 신체능려과 점프력을 보유함. 리바운드를 제압하는 자가 시합을 제압한다!",
+            "image" : "/1.PNG"
+        }
+    },
+
+    {
+        "playerCode" : 2,
+        "playerName" : "서태웅",
+        "playerPosition" : "스몰포워드",
+        "detail" : {
+            "description" : "채치수의 여동생이 짝사랑하는 인물! 강백호의 라이벌이다.",
+            "image" : "/2.PNG"
+        }
+    },
+
+    {
+        "playerCode" : 3,
+        "playerName" : "채치수",
+        "playerPosition" : "센터포워드",
+        "detail" : {
+            "description" : "고릴라 덩크!",
+            "image" : "/3.PNG"
+        }
+    },
+
+    {
+        "playerCode" : 4,
+        "playerName" : "송태섭",
+        "playerPosition" : "포인트가드",
+        "detail" : {
+            "description" : "슬램덩크 영화에서 개쩔게 나온다.",
+            "image" : "/4.PNG"
+        }
+    },
+
+    {
+        "playerCode" : 5,
+        "playerName" : "정대만",
+        "playerPosition" : "슈팅가드",
+        "detail" : {
+            "description" : "선생님, 농구가 하고 싶어요",
+            "image" : "/5.PNG"
+        }
+    }
+]

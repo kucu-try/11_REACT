@@ -47,7 +47,7 @@ const Page = () =>{
         backgroundColor : 'white'
     }
 
-
+    
 
     return (
         <>

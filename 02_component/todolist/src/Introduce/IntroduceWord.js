@@ -16,7 +16,7 @@ function IntroduceWord({fontColor}){
                     INTRODUCE MYSELF</h2>
 
                 <h3 style={{fontSize:'1.0625rem',position: 'absolute', bottom: '0',fontWeight:'300', color: 'black' ,
-                    marginBlockStart: '0', marginBlockEnd: '0'  ,color : fontColor ?  '#ff99cc' : 'black' }}> 
+                    marginBlockStart: '0', marginBlockEnd: '0'  ,color : fontColor ? '#cc99ff': 'black' }}> 
                     안녕하세요! 저는 ChatGPT, OpenAI에서 <br/> 
                     GPT-3.5 아키텍처를 기반으로 하고 있으며, 여러 분야에서<br/>
                     움을 제공할 수 있습니다. 안녕하세요! 저는 ChatGPT, <br/>

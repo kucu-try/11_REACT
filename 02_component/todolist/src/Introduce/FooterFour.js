@@ -29,7 +29,6 @@ function FooterFour({fontColor}){
             <h2 style={style5}>GITHUB</h2>
             <a href="https://github.com/kucu-try">
                 <img style={style6} src= {fontColor ? "/바이올렛깃.png" : "/깃허브3.png"}  alt="깃허브 로고"/>
-               
             </a>
         </div>
 

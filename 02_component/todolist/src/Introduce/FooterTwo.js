@@ -16,11 +16,11 @@ function FooterTwo({fontColor}){
 
     const style6 ={
         color : '#696969'
-        ,marginBlockStart : '1rem'
-        ,marginBlockEnd : '1rem'
+        ,marginBlockStart : '0.7rem'
+        ,marginBlockEnd : '0.7rem'
         ,marginLeft : '3%'
         ,color : fontColor ? '#cc99ff' : 'black' 
-        ,fontWeight : fontColor ? '350' : '600'
+        ,fontWeight : fontColor ? '300' : '600'
     }
     
 
