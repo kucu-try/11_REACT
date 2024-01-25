@@ -2,7 +2,7 @@ import Title from "../Introduce/Title"
 
 const style = {
     position : 'absolute',
-    left : '20%',
+    left : '15%',
     top : '20%',
     fontSize : '3.3rem',
     fontFamily : 'jejuhallasan'
@@ -11,8 +11,9 @@ const style = {
 const asideColor = {
     position : 'absolute',
     right : '0',
-    backgroundColor : '',
-    width : ''
+    backgroundColor : '#669966',
+    width : '22%',
+    height : '100%'
 }
 
 const Semi = ()=>{
@@ -20,7 +21,10 @@ const Semi = ()=>{
         <>
             <Title/>
             <h1 style={style}>학교 종이 땡땡땡</h1>
-            {/* <div style={}/> */}
+            <div style={asideColor}/>
+            <div>
+
+            </div>
         </>
     )
 }
