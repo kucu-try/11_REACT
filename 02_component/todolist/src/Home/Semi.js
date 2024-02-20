@@ -1,11 +1,15 @@
-import { Navigation, Pagination } from 'swiper/modules';
-import Swiper from 'swiper';
-import SwiperSlide  from 'swiper/react';
 
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import './index.css';
+
+// import required modules
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import Title from "../Introduce/Title";
 
 const style = {
@@ -31,21 +35,18 @@ const Semi = () => {
             <h1 style={style}>학교 종이 땡땡땡</h1>
             <div style={asideColor} />
             <div>
-                <Swiper
-                    // install Swiper modules
-                    modules={[Navigation, Pagination]}
-                    spaceBetween={50}
-                    slidesPerView={3}
-                    navigation
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
+            <Swiper
+                les={[Navigation, Pagination, Autoplay]}
+                spaceBetween={50}
+                slidesPerView={3}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
                 >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    ...
-                </Swiper>
+                <SwiperSlide>Slide 1</SwiperSlide>
+                <SwiperSlide>Slide 2</SwiperSlide>
+                <SwiperSlide>Slide 3</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+            </Swiper>
             </div>
 
         </>

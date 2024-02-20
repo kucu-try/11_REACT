@@ -9,3 +9,14 @@ html {
     width: 100vw;
     height: 100vh;
 }
+
+.swiper {
+    position: absolute;
+    left: 60%;
+    top: 300px;
+    height: 400px;
+}
+
+.swiper-slide{
+    background-color: rgb(237, 213, 213);
+}
